@@ -13,6 +13,7 @@ document.addEventListener('scroll', () => {
     }
 });
 
+
 // navbar를 클릭했을 해당 위치로 스크롤링되도록
 const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event) =>{
@@ -21,7 +22,15 @@ navbarMenu.addEventListener('click', (event) =>{
     if(link == null){
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
+});
+
+
+//navbar toggle 버튼
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', ()=> {
+    navbarMenu.classList.toggle('open');
 });
 
 //'contact me' 버튼 클릭 시 홈으로 이동
