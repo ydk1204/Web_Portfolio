@@ -11,7 +11,7 @@ document.addEventListener('scroll', () => {
     else {
         navbar.classList.remove('navbar--dark')
     }
-})
+});
 
 // navbar를 클릭했을 해당 위치로 스크롤링되도록
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -28,7 +28,31 @@ navbarMenu.addEventListener('click', (event) =>{
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
+});
+
+// 스크롤링 되어 홈화면을 지나면 홈화면 흐리게 만들기
+const home = document.querySelector('.home__container');
+const homeHeight = home.getBoundingClientRect().height;
+document.addEventListener('scroll', ()=> {
+    home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+//스크롤을 아래로 내릴 때 "arrow up"버튼 나타내기
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=>{
+    if(window.scrollY > homeHeight /2) {
+        arrowUp.classList.add('visible');
+    }
+    else {
+        arrowUp.classList.remove('visible');
+    }
+});
+
+//"arrow up"버튼 클릭
+arrowUp.addEventListener('click', ()=>{
+    scrollIntoView('#home');
 })
+
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
