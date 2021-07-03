@@ -417,47 +417,93 @@ p {
   background-color: var(--color-dark-white);
 }
 
-/* Testimonial */
-#testimonials {
+/* github__links */
+#github {
   background-color: var(--color-light-white);
 }
 
-.testimonials {
-  margin: 40px;
+.github__links {
+  /* margin: 40px; */
 }
 
-.testimonial {
+.github {
   display: flex;
-  margin: 32px 0;
+  flex-wrap: wrap;
 }
 
-.testimonial__avatar {
-  width: 150px;
-  height: 150px;
+.github__is {
+  display: flex;
+  justify-content: center;
+  opacity: 1;
+  transition: all var(--animation-duration) ease-out;
+}
+
+.work__image {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
   border-radius: 50%;
+  transition: all var(--animation-duration) ease;
 }
 
-.testimonial__avatar:nth-child(odd) {
+.github__link {
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 200px;
+  height: 200px;
+  /* margin: 2px; */
+  background-color: var(--color-light-white);
+}
+
+.links__description {
+  border-radius: 50%;
+  position: absolute;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all var(--animation-duration) ease-in;
+}
+
+.work__image:hover,
+.github__link:hover .links__description {
+  opacity: 0.7;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+.links__description h3 {
+  color: var(--color-orange);
+}
+
+.links__description h3::after {
+  content: "";
+  display: block;
+  position: relative;
+  left: 50%;
+  width: 50px;
+  height: 2px;
+  transform: translateX(-50%);
+  margin-top: 8px;
+  background-color: var(--color-dark-white);
+}
+
+/* 
+.work__image:nth-child(odd) {
   margin-right: 40px;
 }
 
-.testimonial__avatar:nth-child(even) {
+.work__image:nth-child(even) {
   margin-left: 40px;
-}
-
-.testimonial__speech-bubble {
-  padding: 18px;
-  background-color: var(--color-white);
-  border-radius: var(--size-border-radius);
-}
-
-.testimonial__speech-bubble p {
-  color: var(--color-light-grey);
-}
-
-.testimonial__speech-bubble a {
-  color: var(--color-pink);
-}
+} */
 
 /* contact */
 #contact {
@@ -575,21 +621,25 @@ p {
     flex-grow: 1;
   }
 
-  .testimonial {
+  .github {
     flex-direction: column;
     align-items: center;
   }
 
-  .testimonial__avatar {
-    width: 120px;
-    height: 120px;
+  .github__link {
+    flex-grow: 1;
   }
 
-  .testimonial__avatar:nth-child(even),
+  .work__image {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* .testimonial__avatar:nth-child(even),
   .testimonial__avatar:nth-child(odd) {
     margin: 0;
     margin-bottom: 20px;
-  }
+  } */
 
   .testimonial__speech-bubble {
     order: 1;
