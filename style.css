@@ -379,6 +379,7 @@ p {
 .project__img {
   max-width: 100%;
   max-height: 100%;
+  align-self: center;
 }
 
 .projects__description {
@@ -422,18 +423,15 @@ p {
   background-color: var(--color-light-white);
 }
 
-.github__links {
-  /* margin: 40px; */
-}
-
 .github {
   display: flex;
-  flex-wrap: wrap;
 }
 
 .github__is {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  padding: 16px 0;
   opacity: 1;
   transition: all var(--animation-duration) ease-out;
 }
@@ -442,6 +440,7 @@ p {
   width: 200px;
   height: 200px;
   padding: 10px;
+  align-self: center;
   border-radius: 50%;
   transition: all var(--animation-duration) ease;
 }
@@ -465,18 +464,18 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  opacity: 0;
+  width: 90%;
+  height: 90%;
+  top: 5;
+  left: 5;
+  opacity: 0.8;
   transition: all var(--animation-duration) ease-in;
 }
 
 .work__image:hover,
 .github__link:hover .links__description {
-  opacity: 0.7;
-  transform: scale(1.1);
+  opacity: 0.6;
+  transform: scale(1.05);
   z-index: 1;
 }
 
@@ -495,15 +494,6 @@ p {
   margin-top: 8px;
   background-color: var(--color-dark-white);
 }
-
-/* 
-.work__image:nth-child(odd) {
-  margin-right: 40px;
-}
-
-.work__image:nth-child(even) {
-  margin-left: 40px;
-} */
 
 /* contact */
 #contact {
@@ -621,28 +611,9 @@ p {
     flex-grow: 1;
   }
 
-  .github {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .github__link {
-    flex-grow: 1;
-  }
-
   .work__image {
     width: 200px;
     height: 200px;
-  }
-
-  /* .testimonial__avatar:nth-child(even),
-  .testimonial__avatar:nth-child(odd) {
-    margin: 0;
-    margin-bottom: 20px;
-  } */
-
-  .testimonial__speech-bubble {
-    order: 1;
   }
 
   .arrow-up {
