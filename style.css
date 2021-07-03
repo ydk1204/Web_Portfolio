@@ -4,8 +4,8 @@
   --color-white: #ffffff;
   --color-light-white: #eeeeee;
   --color-dark-white: #bdbdbd;
-  --color-pink: #34515e;
-  --color-dark-pink: #ffecb3;
+  --color-dark-blue: #34515e;
+  --color-light-yellow: #ffecb3;
   --color-dark-grey: #4d4d4d;
   --color-grey: #616161;
   --color-light-grey: #7c7979;
@@ -104,7 +104,7 @@ p {
 }
 
 #navbar.navbar--dark {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
   padding: 8px;
 }
 
@@ -131,7 +131,7 @@ p {
 
 .navbar__menu__item:hover {
   border-color: var(--color-white);
-  background-color: var(--color-dark-pink);
+  background-color: var(--color-light-yellow);
   color: #000000;
 }
 
@@ -212,7 +212,7 @@ p {
   transition: all var(--animation-duration) ease;
 }
 .major__icon:hover i {
-  color: var(--color-pink);
+  color: var(--color-dark-blue);
   transform: rotate(10deg) scale(1.1);
 }
 
@@ -325,7 +325,7 @@ p {
 
 .category__btn.selected,
 .category__btn:hover {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
   color: var(--color-white);
 }
 
@@ -498,7 +498,7 @@ p {
 
 /* contact */
 #contact {
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
 }
 
 .contact__title,
@@ -534,7 +534,7 @@ p {
   height: 70px;
   font-size: 50px;
   color: var(--color-white);
-  background-color: var(--color-pink);
+  background-color: var(--color-dark-blue);
   border-radius: 50%;
   opacity: 0;
   pointer-events: none;
@@ -567,7 +567,7 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
-    background-color: var(--color-pink);
+    background-color: var(--color-dark-blue);
   }
 
   #navbar.navbar--dark {
