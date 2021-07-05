@@ -461,7 +461,7 @@ p {
 .links__description {
   border-radius: 50%;
   position: absolute;
-  background-color: black;
+  background-color: #00000090;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -469,13 +469,12 @@ p {
   height: 90%;
   top: 5;
   left: 5;
-  opacity: 0.8;
   transition: all var(--animation-duration) ease-in;
 }
 
 .work__image:hover,
 .github__link:hover .links__description {
-  opacity: 0.6;
+  background-color: #00000070;
   transform: scale(1.05);
   z-index: 1;
 }
